@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - Thai Art & Culture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sarabun:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sport-card {
+            display: flex;
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .sport-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .sport-card img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .sport-content {
+            padding: 2rem;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sport-content h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .sport-card {
+                flex-direction: column;
+            }
+
+            .sport-card img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .sport-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <div class="logo">ThaiCulture</div>
+        </a>
+        <div class="hamburger">
+            <span>&#9776;</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="festivals.html">Festivals</a>
+            <a href="arts.html">Arts</a>
+            <a href="sports.html" class="active">Sports</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html"><button class="btn btn-secondary">Login</button></a>
+            <a href="signup.html"><button class="btn btn-primary">Sign Up</button></a>
+        </div>
+    </nav>
+
+    <header class="hero" style="background-image: url('images/sport.png'); height: 60vh;">
+        <div class="hero-content">
+            <h1>Thai Sports</h1>
+            <p>Strength, Agility, and Tradition</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="sport-card">
+            <img src="images/sport.png" alt="Muay Thai">
+            <div class="sport-content">
+                <h2>Muay Thai</h2>
+                <p>Muay Thai, or "The Art of Eight Limbs," is Thailand's national sport and martial art. It is
+                    characterized by the combined use of fists, elbows, knees, and shins. Known for its effectiveness
+                    and power, Muay Thai is practiced worldwide for fitness, self-defense, and competition.</p>
+            </div>
+        </div>
+        <div class="sport-card">
+            <img src="images/hero.png" alt="Takraw">
+            <div class="sport-content">
+                <h2>Sepak Takraw</h2>
+                <p>Sepak Takraw is a sport native to Southeast Asia, resembling volleyball but played with a rattan ball
+                    and using only the feet, knees, chest, and head. It requires immense agility and acrobatic skills,
+                    with players often performing mid-air flips to spike the ball.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Thai Art & Culture.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
