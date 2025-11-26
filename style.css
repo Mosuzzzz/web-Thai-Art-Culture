@@ -8,8 +8,8 @@
     --text-color: #333;
     --bg-color: #FAFAF5;
     --white: #FFFFFF;
-    --font-heading: 'Prompt', sans-serif;
-    --font-body: 'Sarabun', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
@@ -43,9 +43,10 @@ a {
     transition: var(--transition);
 }
 
-/* Navigation */
+/* ========== Navigation ========== */
 nav {
     background-color: var(--white);
+    border-radius: 20px;
     box-shadow: var(--shadow);
     padding: 1rem 2rem;
     display: flex;
@@ -98,7 +99,7 @@ nav {
     gap: 1rem;
 }
 
-/* Buttons */
+/* ========== Buttons ========== */
 .btn {
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
@@ -130,30 +131,108 @@ nav {
     color: var(--white);
 }
 
+/* ========== Hero Section (Homepage) ========== */
 .header-container {
-    margin-top: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 4rem;
+    min-height: 500px;
 }
 
-.header-card img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-card {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.header-card img {
     width: 100%;
-    height: 300px;
-    border-radius: 15px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.header-card img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
 }
 
 .header-content {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+.header-content .btn {
+    animation: fadeInUp 1.2s ease-out;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        gap: 2rem;
+        margin: 2rem auto;
+        min-height: auto;
+    }
+
+    .header-card img {
+        height: 300px;
+    }
+
+    .header-content {
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
 }
 
 /* Hero Section */
@@ -199,7 +278,7 @@ nav {
     opacity: 0.9;
 }
 
-/* Container & Sections */
+/* ========== Main Content ========== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -264,7 +343,7 @@ nav {
     color: #666;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
     background-color: var(--accent-color);
     color: var(--white);

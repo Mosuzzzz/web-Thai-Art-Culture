@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation
+    // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 
@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Login Form Validation
+    // Login form - make sure email field is referenced correctly
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const username = loginForm.username.value.trim();
+            const email = loginForm.email.value.trim();
             const password = loginForm.password.value.trim();
 
-            if (username === '' || password === '') {
+            if (email === '' || password === '') {
                 alert('Please fill in all fields.');
             } else {
                 alert('Login Successful!');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Signup Form Validation
+    // Signup form validation
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
         signupForm.addEventListener('submit', (e) => {
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const province = signupForm.province.value;
             const nationality = signupForm.nationality.value;
 
+            // Check if all fields are filled
             if (firstname === '' || lastname === '' || email === '' || password === '' || province === '' || nationality === '') {
                 alert('Please fill in all fields.');
             } else {
